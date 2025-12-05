@@ -1,145 +1,114 @@
-# Contributing to ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension
+# Contributing to ZenRead-AI-Content-Reader-Browser-Extension
 
-Welcome! We are thrilled you're considering contributing to **ZenRead**, an advanced AI-powered browser extension designed for distraction-free reading. Your contributions help us maintain a high-quality, privacy-focused, and feature-rich tool for the community.
+We appreciate your interest in contributing to **ZenRead-AI-Content-Reader-Browser-Extension**! This guide outlines the essential steps and guidelines to ensure a smooth, efficient, and high-quality contribution process. Our philosophy is "Zero-Defect, High-Velocity, Future-Proof," and we expect all contributions to align with this standard.
 
-Please take a moment to review this document to understand our development process and guidelines.
+## 1. Code of Conduct
 
-## Table of Contents
-- [Code of Conduct](#code-of-conduct)
-- [How Can I Contribute?](#how-can-i-contribute)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Suggesting Enhancements](#suggesting-enhancements)
-  - [Your First Code Contribution](#your-first-code-contribution)
-  - [Pull Request Guidelines](#pull-request-guidelines)
-- [Development Setup](#development-setup)
-  - [Prerequisites](#prerequisites)
-  - [Cloning the Repository](#cloning-the-repository)
-  - [Installing Dependencies](#installing-dependencies)
-  - [Running the Extension](#running-the-extension)
-  - [Testing](#testing)
-  - [Linting and Formatting](#linting-and-formatting)
-- [Commit Message Guidelines](#commit-message-guidelines)
-- [Security Vulnerabilities](#security-vulnerabilities)
-- [License](#license)
+By participating in this project, you are expected to uphold our [Code of Conduct](https://github.com/chirag127/ZenRead-AI-Content-Reader-Browser-Extension/blob/main/.github/CODE_OF_CONDUCT.md). Please treat everyone with respect and foster a positive, inclusive environment.
 
----
+## 2. How Can I Contribute?
 
-## Code of Conduct
+There are many ways to contribute, not just by writing code:
 
-This project and everyone participating in it is governed by the [ZenRead Code of Conduct](https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/blob/main/.github/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+*   **Report Bugs:** Identify and report issues to help us improve stability and correctness.
+*   **Suggest Enhancements:** Propose new features or improvements to existing ones.
+*   **Improve Documentation:** Enhance our `README.md`, `AGENTS.md`, or other documentation.
+*   **Submit Code:** Implement new features, fix bugs, or improve performance.
+*   **Review Code:** Provide constructive feedback on Pull Requests.
 
-## How Can I Contribute?
+## 3. Reporting Bugs
 
-### Reporting Bugs
+*   Before submitting a new bug report, please check existing issues to see if the problem has already been reported.
+*   Use our dedicated [Bug Report Template](https://github.com/chirag127/ZenRead-AI-Content-Reader-Browser-Extension/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) to ensure all necessary information is provided.
+*   Clearly describe the steps to reproduce the bug, expected behavior, and actual behavior. Include screenshots or videos if helpful.
+*   Specify your browser (Chrome, Firefox, Edge) and version, as well as the extension version.
 
-If you find a bug, please help us by submitting an issue to our [GitHub Issues](https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/issues). Before opening a new issue, please:
-1.  **Check existing issues** to see if the bug has already been reported.
-2.  Use the dedicated [bug report template](https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/issues/new?assignees=&labels=bug&projects=&template=bug_report.md) and fill out all required information.
-3.  Provide clear, concise steps to reproduce the bug.
+## 4. Suggesting Enhancements
 
-### Suggesting Enhancements
+*   Before submitting an enhancement suggestion, please check existing issues for similar ideas.
+*   Open a new issue and clearly describe your proposed feature or enhancement.
+*   Explain *why* this enhancement is valuable and how it improves the user experience or project functionality.
+*   Provide any mockups or examples if applicable.
 
-We welcome suggestions for new features or improvements!
-1.  **Check existing issues** to see if your suggestion has already been discussed.
-2.  Open a new issue in our [GitHub Issues](https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/issues).
-3.  Clearly describe the enhancement, including its potential benefits and use cases.
+## 5. Your First Code Contribution
 
-### Your First Code Contribution
+If you're new to the project, consider looking for issues labeled `good first issue` or `help wanted`.
 
-If you're new to the project, consider starting with issues labeled `good first issue` or `help wanted`. These are typically simpler and great for familiarizing yourself with the codebase.
+## 6. Setting Up Development Environment
 
-### Pull Request Guidelines
-
-1.  **Fork** the repository on GitHub.
-2.  **Clone** your forked repository to your local machine.
-3.  **Create a new branch** for your feature or bug fix: `git checkout -b feature/your-feature-name` or `git checkout -b bugfix/issue-number`.
-4.  **Implement your changes**, following our [Development Setup](#development-setup) guidelines for linting and testing.
-5.  **Write clear, concise commit messages** (see [Commit Message Guidelines](#commit-message-guidelines)).
-6.  **Push your branch** to your forked repository.
-7.  **Open a Pull Request** against the `main` branch of the original repository.
-8.  **Fill out the Pull Request template** completely and include references to any related issues (e.g., `Fixes #123`, `Closes #456`).
-9.  **Respond to feedback** from maintainers and reviewers.
-
-## Development Setup
-
-To get your development environment ready:
+This project is built using modern web technologies, focusing on a robust and scalable architecture.
 
 ### Prerequisites
 
-*   Node.js (LTS recommended)
-*   npm or yarn (or pnpm)
+*   **Node.js**: Latest LTS version (e.g., v20.x or higher)
+*   **pnpm**: A fast, disk space efficient package manager. Install with `npm install -g pnpm`.
+*   **Git**: For version control.
 
-### Cloning the Repository
+### Installation Steps
 
-bash
-git clone https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension.git
-cd ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension
+1.  **Fork the repository:** Click the "Fork" button at the top right of this page.
+2.  **Clone your forked repository:**
+    bash
+    git clone https://github.com/your-username/ZenRead-AI-Content-Reader-Browser-Extension.git
+    cd ZenRead-AI-Content-Reader-Browser-Extension
+    
+3.  **Install dependencies:**
+    bash
+    pnpm install
+    
+4.  **Start development server (for WXT extensions):**
+    bash
+    pnpm dev
+    
+    This will typically start a development server that rebuilds on changes and allows loading the extension into your browser for testing (e.g., via `chrome://extensions` -> Load unpacked).
 
+## 7. Branching Strategy
 
-### Installing Dependencies
+We follow a `main` branch protected strategy. All contributions should be made via feature branches:
 
-bash
-# Using npm
-npm install
+*   Create a new branch from `main`: `git checkout -b feature/your-feature-name` or `bugfix/issue-number`.
+*   Keep your branch updated with `main`: `git pull origin main` regularly.
+*   Once your work is complete, push your branch: `git push origin feature/your-feature-name`.
+*   Open a Pull Request.
 
-# Or using yarn
-yarn install
+## 8. Pull Request Guidelines
 
-# Or using pnpm
-pnpm install
+*   **Atomic Commits:** Make small, focused commits that each address a single concern.
+*   **Meaningful Messages:** Write clear, descriptive commit messages following Conventional Commits (e.g., `feat: add AI summarization`, `fix: resolve reader mode styling issue`).
+*   **Tests:** Ensure all new features have comprehensive unit tests (`Vitest`) and, where applicable, end-to-end tests (`Playwright`). All existing tests must pass.
+*   **Linting/Formatting:** Ensure your code adheres to our strict linting and formatting rules enforced by `Biome`. Run `pnpm run lint:fix` and `pnpm run format` before committing.
+*   **Documentation:** Update any relevant documentation (`README.md`, comments) for new features or significant changes.
+*   **Follow Template:** Use the [Pull Request Template](https://github.com/chirag127/ZenRead-AI-Content-Reader-Browser-Extension/blob/main/.github/PULL_REQUEST_TEMPLATE.md) provided.
+*   **Link Issues:** Reference any related issues in your PR description (e.g., `Closes #123`).
+*   **Review:** Be responsive to feedback during the review process. Address comments promptly.
 
+## 9. Coding Standards
 
-### Running the Extension (Development Mode)
+We adhere to the following principles and tools:
 
-ZenRead is a browser extension. To run it in development mode:
+*   **Language:** TypeScript (Strict Mode) for type safety and maintainability.
+*   **Frameworks:** WXT for browser extension development, Vite for bundling.
+*   **Architecture:** Feature-Sliced Design (FSD) is encouraged to ensure clear separation of concerns, scalability, and testability. Organize code by feature slices, layers, and segments.
+*   **Linting & Formatting:** `Biome` is used for ultra-fast and opinionated linting and formatting. Strict adherence is mandatory.
+*   **Principles:** Adhere to SOLID, DRY (Don't Repeat Yourself), and YAGNI (You Aren't Gonna Need It) principles.
+*   **Accessibility:** Prioritize accessibility (A11y) in all UI/UX development, given the nature of an assistive content reader.
+*   **Privacy:** All features and data handling must be designed with a privacy-first mindset.
 
-bash
-# Build for development (e.g., using Vite/WXT)
-npm run dev
+## 10. Testing
 
-Then, load the generated `dist` or `build` directory as an unpacked extension in your browser (Chrome, Firefox, etc.). Consult the specific project documentation for detailed instructions on loading your extension.
+Robust testing is critical to our "Zero-Defect" philosophy.
 
-### Testing
+*   **Unit Tests:** Written with `Vitest` for individual functions, components, and modules.
+*   **End-to-End (E2E) Tests:** Implemented with `Playwright` to simulate user interactions and verify the full extension functionality across different browsers.
+*   **Run Tests Locally:**
+    bash
+    pnpm test           # Run all tests
+    pnpm test:unit      # Run Vitest unit tests
+    pnpm test:e2e       # Run Playwright E2E tests
+    
 
-We use **Vitest** for unit and integration testing. Ensure all new features and bug fixes have adequate test coverage.
+## 11. Security Vulnerabilities
 
-bash
-# Run all tests
-npm test
+If you discover a security vulnerability, please report it responsibly by following our [Security Policy](https://github.com/chirag127/ZenRead-AI-Content-Reader-Browser-Extension/blob/main/.github/SECURITY.md). Do not open a public issue. We appreciate your efforts to keep our project and users safe.
 
-# Run tests in watch mode
-npm run test:watch
-
-
-### Linting and Formatting
-
-We enforce strict code quality using **Biome** for linting and formatting to ensure consistency across the codebase.
-
-bash
-# Run linting and formatting checks
-npm run lint
-npm run format
-
-# Automatically fix linting and formatting issues
-npm run lint:fix
-npm run format:fix
-
-
-## Commit Message Guidelines
-
-We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This helps us generate changelogs and understand the nature of changes.
-
-Examples:
-*   `feat: add text-to-speech option`
-*   `fix(parser): prevent infinite loop on malformed HTML`
-*   `docs: update contributing guidelines`
-*   `refactor: restructure Gemini API integration`
-*   `chore: update dependencies`
-
-## Security Vulnerabilities
-
-We take security seriously. If you discover a security vulnerability, please report it responsibly by following our [Security Policy](https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/blob/main/.github/SECURITY.md).
-
-## License
-
-By contributing to ZenRead, you agree that your contributions will be licensed under its [CC BY-NC 4.0 License](https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/blob/main/LICENSE).
+Thank you for contributing to ZenRead-AI-Content-Reader-Browser-Extension!
